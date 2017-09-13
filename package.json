@@ -1,0 +1,23 @@
+{
+  "name": "metalsmith-image-sizes",
+  "version": "0.0.1",
+  "description": "Adds width and height attributes to <img> tags for local images",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "metalsmith",
+    "image",
+    "dimensions"
+  ],
+  "author": "Filipe Fortes",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^21.0.2"
+  },
+  "dependencies": {
+    "image-size": "^0.6.1",
+    "metalsmith-dom-transform": "^1.0.1"
+  }
+}
