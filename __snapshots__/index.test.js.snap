@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`integration test 1`] = `
+Object {
+  "contents": "<img src=\\"baboon.png\\" width=\\"512\\" height=\\"512\\">",
+  "file": "simple_image.html",
+}
+`;
+
+exports[`integration test 2`] = `
+Object {
+  "contents": "<img src=\\"baboon.png\\" width=\\"512\\" height=\\"512\\">
+        <figure><img src=\\"waterfall.jpg\\" width=\\"200\\" height=\\"150\\"></figure>",
+  "file": "multiple_images.html",
+}
+`;
+
+exports[`integration test 3`] = `
+Object {
+  "contents": "<img src=../tinygif.gif width=10 height=10>",
+  "file": "relative/path.html",
+}
+`;
+
+exports[`integration test 4`] = `
+Object {
+  "contents": "<img src=tinygif.gif width=20 height=20>",
+  "file": "already_specified.html",
+}
+`;
+
+exports[`integration test 5`] = `
+Object {
+  "contents": "<img src=http://httpbin.org/image/jpeg>",
+  "file": "external_image.html",
+}
+`;
+
+exports[`integration test 6`] = `
+Object {
+  "contents": "<img src=bogus.jpg>",
+  "file": "404_image.html",
+}
+`;
