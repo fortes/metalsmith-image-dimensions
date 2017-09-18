@@ -15,6 +15,7 @@
   "author": "Filipe Fortes",
   "license": "MIT",
   "devDependencies": {
+    "codecov": "^2.3.0",
     "jest": "^21.0.2",
     "metalsmith": "^2.3.0",
     "rimraf": "^2.6.2"
@@ -22,15 +23,6 @@
   "dependencies": {
     "metalsmith-dom-transform": "^2.0.0",
     "metalsmith-media-metadata": "^0.0.2"
-  },
-  "jest": {
-    "modulePathIgnorePatterns": [
-      "__build"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "__build"
-    ]
   },
   "jest": {
     "modulePathIgnorePatterns": [
