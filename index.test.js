@@ -9,6 +9,11 @@ const path = require('path');
 let files;
 
 beforeAll(done => {
+  // Mock out `console.error`
+  /* eslint-disable no-console */
+  const originalConsoleError = console.error;
+
+  console.error = jest.fn(() => {});
   // Setup metalsmith, but don't build yet.
   const metal = Metalsmith(__dirname)
     .source('./')
@@ -52,6 +57,7 @@ beforeAll(done => {
 });
 
 afterAll(() => {
+  console.error = originalConsoleError;
   return rimraf(path.join(__dirname, '__build'));
 });
 
