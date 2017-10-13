@@ -22,9 +22,10 @@ module.exports = function(options = {}) {
         continue;
       }
 
+      const fileDirectory = path.join(metalsmith.source(), path.dirname(file));
       const imagepath = path.relative(
         metalsmith.source(),
-        metalsmith.path(path.dirname(file), image.src),
+        metalsmith.path(fileDirectory, image.src),
       );
 
       if (imagepath in files) {
@@ -46,6 +47,6 @@ module.exports = function(options = {}) {
       }
     }
 
-    done();
+    setImmediate(done);
   };
 };

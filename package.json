@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-image-dimensions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds width and height attributes to <img> tags for local images",
   "main": "index.js",
   "scripts": {

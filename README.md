@@ -62,4 +62,5 @@ metalsmith.use(domTransform({
 
 ## Changelog
 
+* `0.0.2`: Fix bug where paths were not correctly resolved
 * `0.0.1`: First release
