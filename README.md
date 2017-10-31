@@ -37,19 +37,22 @@ If you're already using [`metalsmith-dom-transform`](https://github.com/fortes/m
 
 ```js
 const domTransform = require('metalsmith-image-dimensions');
+const readImageSizes = require('metalsmith-image-dimensions/read_image_sizes');
 const imageDimensionsTransform = require('metalsmith-image-dimensions/transform');
 
-metalsmith.use(domTransform({
-  transforms: [
-    imageDimensionsTransform(options),
-    // Your other transforms go here
-  ]
-}));
+metalsmith
+  .use(readImageSizes({
+    path: '**/*.+(jpg|png)'
+  }))
+  .use(domTransform({
+    transforms: [
+      imageDimensionsTransform(options),
+      // Your other transforms go here
+    ]
+  }));
 ```
 
-## Requirements
-
-* [`metalsmith-media-metadata`](https://github.com/fortes/metalsmith-media-metadata)
+Note that you must separately use `readImageSizes` *before* running the `domTransform`.
 
 ## Notes
 
@@ -58,9 +61,11 @@ metalsmith.use(domTransform({
 ## Configuration
 
 * `domain`: Domain where this is hosted, used to determine if an image is external. It is unlikely that you'd need to set this, unless you have absolute URLs for image that are local to the site (default: `http://example.com`).
+* `path`: [`minimatch`](https://github.com/isaacs/minimatch) *case-insensitive* glob that determines which files get processed (default: `**/*.+(gif|jpg|png)`)
 * `overwrite`: Write `width` and `height` tags even if already set (default `false`)
 
 ## Changelog
 
+* `0.1.0`: Remove requirement for `metalsmith-media-metadata` and expose `readImageSizes`
 * `0.0.2`: Fix bug where paths were not correctly resolved
 * `0.0.1`: First release

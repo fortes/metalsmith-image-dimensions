@@ -1,6 +1,5 @@
 /* eslint-env jest,node */
 const imageDimensions = require('./index');
-const mediaMetadata = require('metalsmith-media-metadata');
 const Metalsmith = require('metalsmith');
 const {promisify} = require('util');
 const rimraf = promisify(require('rimraf'));
@@ -19,7 +18,6 @@ beforeAll(done => {
     .source('./')
     .ignore(['.*', 'node_modules', '__*', 'coverage'])
     .destination('__build')
-    .use(mediaMetadata())
     .use((files, metalsmith, done) => {
       // Manually add fake HTML files for test
       Object.assign(files, {
@@ -43,13 +41,15 @@ beforeAll(done => {
         '404_image.html': {
           contents: new Buffer('<img src=bogus.jpg>'),
         },
+        'image_without_size_metadata.html': {
+          contents: new Buffer('<img src=waterfall.webp>'),
+        },
       });
 
       setImmediate(done);
     })
     .use(imageDimensions());
 
-  // .use(mediaMetadata({}))
   metal.build((err, processedFiles) => {
     files = processedFiles;
     done(err);
@@ -69,4 +69,8 @@ test('integration test', () => {
 
     expect({file, contents: data.contents.toString()}).toMatchSnapshot();
   });
+
+  console.error.mock.calls.forEach(call => {
+    expect(call[0]).toMatchSnapshot();
+  })
 });

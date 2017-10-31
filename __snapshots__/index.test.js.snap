@@ -42,3 +42,14 @@ Object {
   "file": "404_image.html",
 }
 `;
+
+exports[`integration test 7`] = `
+Object {
+  "contents": "<img src=waterfall.webp>",
+  "file": "image_without_size_metadata.html",
+}
+`;
+
+exports[`integration test 8`] = `"Cannot find file for image: <img src=\\"bogus.jpg\\">"`;
+
+exports[`integration test 9`] = `"No size info image: waterfall.webp. Did you call readImageSizes?"`;

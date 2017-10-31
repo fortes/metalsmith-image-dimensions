@@ -30,17 +30,15 @@ module.exports = function(options = {}) {
 
       if (imagepath in files) {
         const data = files[imagepath];
-
-        if (!data.exif) {
+        if (data.width && data.height) {
+          image.width = data.width;
+          image.height = data.height;
+        } else {
           // eslint-disable-next-line no-console
           console.error(
-            'Missing exif data in file, is `metalsmith-media-medadata` installed?',
+            `No size info image: ${imagepath}. Did you call readImageSizes?`,
           );
-          continue;
         }
-
-        image.width = data.exif.ImageWidth;
-        image.height = data.exif.ImageHeight;
       } else {
         // eslint-disable-next-line no-console
         console.error(`Cannot find file for image: ${image.outerHTML}`);
