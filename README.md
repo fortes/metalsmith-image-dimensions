@@ -21,11 +21,9 @@ Output:
 ## Usage
 
 ```js
-const mediaMetadata = require('metalsmith-media-metadata');
 const imageDimensions = require('metalsmith-image-dimensions');
 
 metalsmith
-  .use(mediaMetadata())
   .use(imageDimensions({
     overwrite: true
   }));
