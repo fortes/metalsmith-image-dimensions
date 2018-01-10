@@ -16,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "codecov": "^2.3.0",
-    "jest": "^21.0.2",
+    "jest": "^22.0.5",
     "metalsmith": "^2.3.0",
     "rimraf": "^2.6.2"
   },
