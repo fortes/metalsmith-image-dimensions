@@ -32,6 +32,7 @@
     "testPathIgnorePatterns": [
       "/node_modules/",
       "__build"
-    ]
+    ],
+    "testURL": "http://localhost/"
   }
 }
