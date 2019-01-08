@@ -1167,9 +1167,10 @@ ignore-walk@^3.0.1:
   dependencies:
     minimatch "^3.0.4"
 
-image-size@^0.6.1:
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.6.3.tgz#e7e5c65bb534bd7cdcedd6cb5166272a85f75fb2"
+image-size@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.7.0.tgz#1ac3de4eaaee0386f19ba6b19d479e02fc060de7"
+  integrity sha512-oWhJUMBxKQhmdSUPw+bcU+JC9pUMBbLnDPIZCFxZWGajV2HCRA5n+fHCCT3qDPGbGVEwP2cYTP2efsSk8j0YKA==
 
 imurmurhash@^0.1.4:
   version "0.1.4"
