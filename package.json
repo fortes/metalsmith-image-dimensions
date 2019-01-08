@@ -21,7 +21,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "image-size": "^0.6.1",
+    "image-size": "^0.7.1",
     "metalsmith-dom-transform": "^2.0.0",
     "minimatch": "^3.0.4"
   },
