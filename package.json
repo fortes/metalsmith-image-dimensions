@@ -15,7 +15,7 @@
   "author": "Filipe Fortes",
   "license": "MIT",
   "devDependencies": {
-    "codecov": "^3.0.0",
+    "codecov": "^3.7.0",
     "jest": "^21.0.2",
     "metalsmith": "^2.3.0",
     "rimraf": "^2.6.2"
