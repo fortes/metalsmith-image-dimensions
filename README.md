@@ -1,3 +1,7 @@
+# No longer maintained
+
+This is no longer maintained, code is archived and available for forking though.
+
 # metalsmith-image-dimensions
 
 [![build status](https://travis-ci.org/fortes/metalsmith-image-dimensions.svg?branch=master)](https://travis-ci.org/fortes/metalsmith-image-dimensions/) [![codecov](https://codecov.io/gh/fortes/metalsmith-image-dimensions/branch/master/graph/badge.svg)](https://codecov.io/gh/fortes/metalsmith-image-dimensions) [![Greenkeeper badge](https://badges.greenkeeper.io/fortes/metalsmith-image-dimensions.svg)](https://greenkeeper.io/)
